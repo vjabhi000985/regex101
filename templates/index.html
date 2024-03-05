@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex101 Clone</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        
+        .navbar{
+            background-color: black;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .content{
+            padding: 20px;
+            text-align: center;
+        }
+
+        form{
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], textarea{
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+            resize: none;
+        }
+
+        input[type="text"]{
+            height: 10px;
+        }
+
+        textarea{
+            flex-grow: 1;
+        }
+
+        button[type="submit"]{
+            padding: 10px 20px;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover{
+            opacity: 0.6;
+            font-weight: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Regex101Clone.com</a>
+    </div>
+    
+    <div class="content" id="home">
+        <h1>Regex101Clone Check</h1>
+        <p>Don't use the expression inside the r""</p>
+        <form action="/test_regex" method="post">
+            <input type="text" name="regex_exp" placeholder="Enter your Regex Expression here">
+            <textarea placeholder="Input text to test your regex" name="test_string"></textarea>
+            <button type="submit">Test Regex</button>
+        </form>
+    </div>
+
+    <div class="content" id="email">
+        <h1>Check Email</h1>
+        <form action="/validate_email" method="post">
+            <input type="text" name="email_id" placeholder="Enter your Email ID">
+            <button type="submit">Validate Email</button>
+        </form>
+    </div>
+
+    <div id="result"></div>
+</body>
+</html>

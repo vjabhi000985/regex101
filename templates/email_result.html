@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex101Clone.com - Email Validation</title>
+    <style>
+        body{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .card{
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card-title{
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .card-content{
+            line-height: 1.5;
+        }
+
+        .highlight{
+            background-color: #ffff99;
+        }
+
+        .button{
+            padding: 10px 20px;
+            background-color: slateblue;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .button:hover{
+            opacity: 0.6;
+        }
+</style>
+</head>
+<body>
+    <div class="card">
+        {% if session.get('email_valid', True) %}
+            <h2 class="card-title">The entered email is valid.</h2>
+        {% else %}
+            <h2 class="card-title">The entered email is not valid.</h2>
+        {% endif %}
+        <a href="{{ url_for('index') }}" class="button">Return to Home</a>
+    </div>
+</body>
+</html>

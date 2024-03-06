@@ -3,6 +3,9 @@
 ## Description: 
 A web application that facilitates experimenting with regular expressions and matching them against text input. Also, it has the feature to validate the entered email.
 
+## Application Design
+![Screenshot (115)](https://github.com/vjabhi000985/regex101/assets/46738718/8e1d76b2-343a-477f-924a-467ae959a366)
+
 ## Features
 - Accepts regular expression patterns and test strings from users.
 - Evaluates matches and displays results.
